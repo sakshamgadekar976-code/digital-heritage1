@@ -1,11 +1,13 @@
+
 import mysql from "mysql2/promise";
+import "dotenv/config";
 
 const db = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "saksham@4545",
-  database: "digital_heritage",
-  port: 3306,
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME || "digital_heritage",
+  port: Number(process.env.DB_PORT || 3306),
 });
 
 export default db;
