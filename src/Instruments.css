@@ -1,0 +1,150 @@
+.instruments-page {
+  min-height: 100vh;
+  background: #07111f;
+  color: #f5f0e6;
+  font-family: Arial, sans-serif;
+  padding-bottom: 70px;
+}
+
+.instruments-header {
+  text-align: center;
+  padding: 70px 20px 45px;
+  border-bottom: 1px solid #26384a;
+}
+
+.instruments-header p {
+  color: #d4af37;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.instruments-header h1 {
+  font-size: 46px;
+  margin: 15px 0;
+}
+
+.instruments-header span {
+  color: #bfc6ce;
+  font-size: 16px;
+}
+
+.instruments-container {
+  width: 86%;
+  max-width: 1200px;
+  margin: 45px auto;
+}
+
+.instrument-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.instrument-card {
+  background: #0d1b2a;
+  border: 1px solid #26384a;
+  border-radius: 18px;
+  padding: 28px;
+  transition: 0.2s;
+}
+
+.instrument-card:hover {
+  border-color: #d4af37;
+  transform: translateY(-5px);
+}
+
+.instrument-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 15px;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.instrument-card h2 {
+  font-size: 25px;
+  margin: 0 0 10px;
+}
+
+.instrument-type {
+  display: inline-block;
+  color: #d4af37;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.instrument-info {
+  border-top: 1px solid #26384a;
+  border-bottom: 1px solid #26384a;
+  padding: 12px 0;
+  margin-bottom: 18px;
+}
+
+.instrument-info p {
+  color: #bfc6ce;
+  font-size: 14px;
+  margin: 7px 0;
+}
+
+.instrument-info strong {
+  color: #f5f0e6;
+}
+
+.instrument-description {
+  color: #bfc6ce;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.instrument-significance {
+  margin-top: 20px;
+  padding: 15px;
+  background: #091522;
+  border-left: 3px solid #d4af37;
+  border-radius: 8px;
+}
+
+.instrument-significance strong {
+  color: #d4af37;
+  font-size: 13px;
+}
+
+.instrument-significance p {
+  color: #bfc6ce;
+  line-height: 1.5;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.loading-text {
+  text-align: center;
+  color: #d4af37;
+  font-size: 18px;
+}
+
+@media (max-width: 900px) {
+  .instrument-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .instrument-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instruments-header h1 {
+    font-size: 34px;
+  }
+
+  .instruments-container {
+    width: 92%;
+  }
+}

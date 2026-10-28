@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
+    "location": "Mumbai, Maharashtra",
+    "description": "Explore art, history, sculptures and cultural heritage."
+  },
+  {
+    "id": 2,
+    "name": "Indian Museum",
+    "location": "Kolkata, West Bengal",
+    "description": "Discover ancient objects, art, archaeology and manuscripts."
+  }
+]

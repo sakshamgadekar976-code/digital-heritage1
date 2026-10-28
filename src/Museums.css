@@ -1,0 +1,230 @@
+.museums-page {
+  min-height: 100vh;
+  padding: 50px 7%;
+  background: #07111f;
+  color: #f5f0df;
+  box-sizing: border-box;
+}
+
+/* Back to Home Button (Centered as per image) */
+.back-button {
+  display: block;
+  margin: 0 auto 25px auto;
+  padding: 11px 18px;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  background: #0c1a2c;
+  color: #f5f0df;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  width: fit-content;
+}
+
+.back-button:hover {
+  background: #d4af37;
+  color: #07111f;
+}
+
+/* Header */
+.museum-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.museum-header p {
+  color: #d4af37;
+  letter-spacing: 3px;
+  font-size: 13px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.museum-header h1 {
+  font-size: 42px;
+  margin: 0 0 12px;
+}
+
+.museum-header span {
+  color: #b8c0cc;
+  font-size: 16px;
+}
+
+/* Search */
+.museum-search {
+  width: 100%;
+  max-width: 650px;
+  box-sizing: border-box;
+  margin: 0 auto 45px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border: 1px solid #8c7224;
+  border-radius: 12px;
+  background: #0c1a2c;
+}
+
+.museum-search span {
+  font-size: 20px;
+}
+
+.museum-search input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.museum-search input::placeholder {
+  color: #8e98a7;
+}
+
+/* Museum Grid */
+.museum-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Museum Card */
+.museum-card {
+  min-width: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #0c1a2c;
+  border: 1px solid #263a52;
+  border-radius: 18px;
+  padding: 25px;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Featured / Highlighted Card ( जसे इमेजमधील पहिल्या कार्डला बॉर्डर आहे ) */
+.museum-card.featured,
+.museum-card:first-child {
+  border: 1px solid #8c7224;
+}
+
+.museum-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Museum Icon */
+.museum-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #18283c;
+  border-radius: 15px;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Museum Information */
+.museum-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.museum-info h2 {
+  font-size: 21px;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  overflow-wrap: anywhere;
+}
+
+.museum-location {
+  color: #d4af37;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.museum-description {
+  color: #aeb7c4;
+  line-height: 1.6;
+  font-size: 14px;
+  min-height: 45px;
+  margin-bottom: 15px;
+}
+
+/* Buttons Stack */
+.museum-button,
+.favorite-button {
+  margin-top: 10px;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #d4af37;
+  color: #07111f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: fit-content;
+}
+
+.museum-button:hover,
+.favorite-button:hover {
+  background: #f0ce55;
+  transform: scale(1.03);
+}
+
+/* No Results */
+.no-results {
+  color: #b8c0cc;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .museums-page {
+    padding: 40px 5%;
+  }
+
+  .museum-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .museums-page {
+    padding: 30px 5%;
+  }
+
+  .museum-header h1 {
+    font-size: 32px;
+  }
+
+  .museum-header span {
+    font-size: 14px;
+  }
+
+  .museum-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .museum-card {
+    padding: 20px;
+  }
+
+  .museum-search {
+    margin-bottom: 30px;
+  }
+}
