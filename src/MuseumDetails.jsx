@@ -34,7 +34,7 @@ function MuseumDetails({ museumId, setPage, onBack }) {
         setLoading(true);
 
         const museumResponse = await fetch(
-          "http://localhost:5000/api/museums"
+          `${import.meta.env.VITE_API_URL}/api/museums`
         );
 
         if (!museumResponse.ok) {
@@ -57,7 +57,7 @@ function MuseumDetails({ museumId, setPage, onBack }) {
         }
 
         const collectionResponse = await fetch(
-          `http://localhost:5000/api/museums/${museumId}/collections`
+          `${import.meta.env.VITE_API_URL}/api/museums/${museumId}/collections`
         );
 
         if (!collectionResponse.ok) {
