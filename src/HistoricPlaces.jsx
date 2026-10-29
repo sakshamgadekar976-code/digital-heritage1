@@ -11,7 +11,7 @@ function HistoricPlaces({ setActivities, setPage }) {
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/historic-places")
+   fetch(`${import.meta.env.VITE_API_URL}/api/historic-places`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch historic places");

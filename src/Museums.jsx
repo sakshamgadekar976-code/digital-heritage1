@@ -26,7 +26,7 @@ function Museums({
   useEffect(() => {
     let isMounted = true;
 
-    fetch("http://localhost:5000/api/museums")
+    fetch(`${import.meta.env.VITE_API_URL}/api/museums`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch museums");
